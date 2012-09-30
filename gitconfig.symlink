@@ -1,0 +1,14 @@
+[user]
+	name = Dean Sas
+	email = dean@deansas.org
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.gitignore
+[alias]
+	st = status
+[interactive]
+	singlekey = true
+
+[push]
+	default = upstream 
