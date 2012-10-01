@@ -47,3 +47,8 @@ let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
 " Reindex the current directory with F8
 map <F8> :!/usr/bin/ctags -R --fields=+iaS  .<CR>
+
+" When moving between search results keep the current result vertically
+" centered
+nnoremap n nzz
+nnoremap N Nzz
