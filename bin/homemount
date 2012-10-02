@@ -1,0 +1,8 @@
+#!/bin/sh
+sshfs -o idmap=user 192.168.0.101:Videos Videos
+sshfs -o idmap=user 192.168.0.101:Pictures Pictures
+sshfs -o idmap=user 192.168.0.101:Documents Documents
+sshfs -o idmap=user 192.168.0.101:code Code
+sshfs -o idmap=user 192.168.0.101:Music Music
+sshfs -o idmap=user 192.168.0.101:Misc Misc
+#sshfs -o idmap=user 192.168.1.101:Bookshelf Bookshelf
