@@ -2,16 +2,16 @@
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
 
-" Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
 " options, so any other options should be set AFTER setting 'compatible'.
-"set compatible
+" Explicitly set nocompatible as some machines are not debian :(
+set nocompatible
 
 if has("syntax")
   syntax on
 endif
 
-" Comment out if using a light background
+" Make syntax highlighting look good on dark backgrounds
 set background=dark
 
 " Jump to the last position when reopening a file
@@ -28,10 +28,9 @@ endif
 " indentation if appropriate.
 set autoindent
 
-
 set tabstop=4			" Display tabs as four spaces wide
-set formatoptions +=n	" Continue numbering lists
-set number				" Show line numbers
+set formatoptions +=n		" Continue numbering lists
+set number			" Show line numbers
 set wildmenu			" Better auto-complete for open buffers etc
 "set showcmd			" Show (partial) command in status line.
 set showmatch			" Show matching brackets.
@@ -41,14 +40,25 @@ set smartcase			" Do smart case matching
 set mouse=a			" Enable mouse usage (all modes)
 
 " ctags
-let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_Ctags_Cmd = "ctags"
 let Tlist_WinWidth = 50
 " Show list of tags with F4
 map <F4> :TlistToggle<cr>
 " Reindex the current directory with F8
-map <F8> :!/usr/bin/ctags -R --fields=+iaS  .<CR>
+map <F8> :!ctags -R --fields=+iaS  .<CR>
 
 " When moving between search results keep the current result vertically
 " centered
 nnoremap n nzz
 nnoremap N Nzz
+
+" Add Space2Tab command which does what it says on the tin
+:command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'. &ts .'\}\)\+#\=repeat("\t", len(submatch(0))/'. &ts .')'
+
+" Highlight trailing whitespace in red when leaving insert mode
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+"
