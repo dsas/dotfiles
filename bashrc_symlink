@@ -5,6 +5,12 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
@@ -53,7 +59,7 @@ fi
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# enable programmable completion features 
+# enable programmable completion features
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
@@ -61,4 +67,21 @@ fi
 export GPGKEY=1D60CDA7
 export EDITOR=vim
 
+# Keep my own bin directory out of the way, as on desktop systems I use the
+# desktop to display my homedir, and I don't need to see that there.
 PATH=$PATH:/home/dean/.bin
+
+# Include current git branch in PS1
+fn_exists()
+{
+        type -t $1 | grep -q 'function'
+}
+
+if ! fn_exists "__git_ps1"; then
+        __git_ps1()
+        {
+                :
+        }
+fi
+
+ PS1='$(__git_ps1 "<%s> ")\u@\h:\w\$ '
