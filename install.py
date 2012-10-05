@@ -3,7 +3,7 @@
 # Install the files contained in this dir as symlinks
 # NIH'd from https://github.com/holman/dotfiles/
 
-import glob, os, hashlib, subprocess, shutil
+import glob, os, shutil
 
 for from_file in glob.glob('*.symlink'):
 	to_file = "%(home)s/.%(tofile)s" % {"home": os.getenv('HOME'), "tofile": from_file.replace(".symlink", "")}
@@ -31,7 +31,7 @@ for from_file in glob.glob('*.symlink'):
 			except:
 				print "Could not remove %(file)s not symlinking" % {"file": to_file}
 				continue
-		try:	
+		try:
 			os.symlink(full_from_file, to_file)
 		except:
 			print "Could not symlink %(from)s to %(to)s" % {"from": full_from_file, "to": to_file}
