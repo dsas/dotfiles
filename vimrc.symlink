@@ -40,7 +40,9 @@ endif
 " indentation if appropriate.
 set autoindent
 
-set tabstop=4			" Display tabs as four spaces wide
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set formatoptions +=n		" Continue numbering lists
 set number			" Show line numbers
 set wildmenu			" Better auto-complete for open buffers etc
@@ -73,4 +75,3 @@ match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-"
