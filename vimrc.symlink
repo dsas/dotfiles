@@ -7,6 +7,18 @@ runtime! debian.vim
 " Explicitly set nocompatible as some machines are not debian :(
 set nocompatible
 
+" Use vundle to manage plugins
+" see https://github.com/gmarik/vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle, required.
+Bundle 'gmarik/vundle'
+" Use better js support
+Bundle "pangloss/vim-javascript"
+" Syntax checking
+Bundle 'scrooloose/syntastic'
+
 if has("syntax")
   syntax on
 endif
