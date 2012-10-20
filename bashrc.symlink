@@ -67,10 +67,6 @@ fi
 export GPGKEY=1D60CDA7
 export EDITOR=vim
 
-# Keep my own bin directory out of the way, as on desktop systems I use the
-# desktop to display my homedir, and I don't need to see that there.
-PATH=$PATH:/home/dean/.bin
-
 # Include current git branch in PS1
 fn_exists()
 {
