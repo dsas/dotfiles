@@ -10,6 +10,5 @@
 	vco = commit --verbose
 [interactive]
 	singlekey = true
-
 [push]
-	default = upstream 
+	default = tracking
