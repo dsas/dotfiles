@@ -84,3 +84,4 @@ fi
 
  # Aliases
  alias ack='ack-grep'
+ alias installvundle='vim -u ~/.vim/vundle.vim +BundleInstall +q'
