@@ -18,7 +18,8 @@ Bundle 'gmarik/vundle'
 Bundle "pangloss/vim-javascript"
 " Syntax checking
 Bundle 'scrooloose/syntastic'
-
+" Do syntax checking on start-up
+let g:syntastic_check_on_open=1
 if has("syntax")
   syntax on
 endif
