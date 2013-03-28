@@ -12,3 +12,5 @@
 	singlekey = true
 [push]
 	default = tracking
+[rebase]
+	autosquash = true
