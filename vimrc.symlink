@@ -8,8 +8,8 @@ runtime! debian.vim
 set nocompatible
 
 " Set up bundles if not on an ancient version of vim
-if version >= 730
-	source vundle.vim
+if version >= 703
+	source ~/.vim/vundle.vim
 endif
 
 if has("syntax")
