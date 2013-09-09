@@ -80,8 +80,8 @@ if ! fn_exists "__git_ps1"; then
         }
 fi
 
- PS1='$(__git_ps1 "<%s> ")\u@\h:\w\$ '
+PS1='$(__git_ps1 "<%s> ")\u@\h:\w\$ '
 
- # Aliases
- alias ack='ack-grep'
- alias installvundle='vim -u ~/.vim/vundle.vim +BundleInstall +q'
+# Aliases
+alias ack='ack-grep'
+alias installvundle='vim -u ~/.vim/vundle.vim +BundleInstall +q'
