@@ -6,9 +6,10 @@ These are some of my common dotfiles for bash, vim, git, etc.
 
 Back up your existing dotfiles first.
 
-- `git clone git://github.com/dsas/dotfiles ~/.dotfiles`
+- `git clone --recursive git://github.com/dsas/dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `./install.py`
+- `installvundle`
 
 
 ## Afters
