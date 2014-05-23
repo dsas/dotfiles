@@ -69,3 +69,9 @@ match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
+" Go straight to the first line when writing a git commit message
+" Yes, I'm too lazy to use gg
+" From
+" http://vim.wikia.com/wiki/Always_start_on_first_line_of_git_commit_message
+au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
