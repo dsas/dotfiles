@@ -20,3 +20,12 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
 " Do syntax checking on start-up
 let g:syntastic_check_on_open=1
+let g:syntastic_php_phpcs_args = "--report=csv --standard=PSR2"
+" Twig syntax highlighting
+Bundle 'evidens/vim-twig'
+" markdown syntax highlighting
+Bundle 'plasticboy/vim-markdown'
+" Tab auto completion
+Bundle 'ervandew/supertab'
+" Better PHP auto completion
+Bundle 'shawncplus/phpcomplete.vim'
