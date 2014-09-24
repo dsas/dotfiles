@@ -63,12 +63,12 @@ nnoremap N Nzz
 " Add Space2Tab command which does what it says on the tin
 :command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'. &ts .'\}\)\+#\=repeat("\t", len(submatch(0))/'. &ts .')'
 
-" Highlight trailing whitespace in red when leaving insert mode
+" Highlight trailing whitespace and space before tab in red
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$\|^\W* \t/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$\|^\W* \t\%#\@<!/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$\|^\W* \t/
 
 " Go straight to the first line when writing a git commit message
 " Yes, I'm too lazy to use gg
