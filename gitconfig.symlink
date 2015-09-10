@@ -8,6 +8,10 @@
 [alias]
 	st = status
 	vco = commit --verbose
+	localbranches = log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+	cherry-pick = cherry-pick -x
+	diffc = diff --cached
+	conflict-patch = show -m --no-prefix -w -U20 HEAD --
 [interactive]
 	singlekey = true
 [push]
@@ -16,3 +20,9 @@
 	autosquash = true
 [diff]
 	noprefix = true
+[merge]
+	tool = diffconflicts
+[mergetool "diffconflicts"]
+	cmd = vim-diff-improved vim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = false
+	keepBackup = false
