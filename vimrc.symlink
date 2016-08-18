@@ -46,14 +46,16 @@ set ignorecase			" Do case insensitive matching
 set smartcase			" Do smart case matching
 "set incsearch			" Incremental search. Annoying.
 "set mouse=a			" Enable mouse usage (all modes)
+"
+let mapleader = "\\"
 
 " ctags
 let Tlist_Ctags_Cmd = "ctags"
 let Tlist_WinWidth = 50
 " Show list of tags with F4
-map <F4> :TlistToggle<cr>
+noremap <F4> :TlistToggle<cr>
 " Reindex the current directory with F8
-map <F8> :!ctags -R --fields=+iaS  .<CR>
+noremap <F8> :!ctags -R --fields=+iaS  .<CR>
 
 " When moving between search results keep the current result vertically
 " centered
@@ -75,3 +77,18 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$\|^\W* \t/
 " From
 " http://vim.wikia.com/wiki/Always_start_on_first_line_of_git_commit_message
 au FileType gitcommit au! BufEnter COMMIT_EDITMSG call setpos('.', [0, 1, 1, 0])
+
+" uppercase the current word in insert mode, saves holding shift.
+inoremap <c-u> <esc>viwUwi
+
+" Open up .vimrc in a vsplit
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" Source .vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Hitting esc in insert mode is too much hard work
+inoremap jk <esc>
+
+" Make <leader>c comment the current line out
+:autocmd FileType php nnoremap <buffer> <localleader>c I//<esc>
