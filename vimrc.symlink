@@ -92,3 +92,6 @@ inoremap jk <esc>
 
 " Make <leader>c comment the current line out
 :autocmd FileType php nnoremap <buffer> <localleader>c I//<esc>
+
+" Make p mean 'in params' when waiting for a movement
+onoremap p :<c-u>normal! f(vi(<cr>
