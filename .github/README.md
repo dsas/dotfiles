@@ -12,8 +12,9 @@ Create an alias to run commands
 `alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
 
 Ignore the dotfiles repository itself, otherwise there will be weird
-recursion stuff 
-`alias `config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
+recursion issues
+echo ".dotfiles" >> .gitignore
+
 
 Clone the repo 
 `git clone --bare <git-repo-url> $HOME/.dotfiles`
