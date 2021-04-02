@@ -13,7 +13,7 @@ Create an alias to run commands
 
 Ignore the dotfiles repository itself, otherwise there will be weird
 recursion issues
-echo ".dotfiles" >> .gitignore
+`echo ".dotfiles" >> .gitignore`
 
 
 Clone the repo 
