@@ -1,6 +1,0 @@
-#!/bin/bash
-# Show git branches by date
-# Useful when you have too many branches and can't remember what the branch
-# created yesterday was called...
-# From http://www.commandlinefu.com/commands/view/2345/show-git-branches-by-date-useful-for-showing-active-branches
-for k in $(git branch | sed /\*/d); do echo "$(git log -1 --pretty=format:"%ct" $k) $k"; done | sort -r | awk '{print $2}'

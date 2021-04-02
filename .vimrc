@@ -1,14 +1,7 @@
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
-runtime! debian.vim
-
-" NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
-" options, so any other options should be set AFTER setting 'compatible'.
-" Explicitly set nocompatible as some machines are not debian :(
 set nocompatible
 
 " Set up bundles if not on an ancient version of vim
-if version >= 703
+if filereadable(expand("~/.vim/vundle.vim"))
 	source ~/.vim/vundle.vim
 endif
 

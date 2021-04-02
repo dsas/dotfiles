@@ -3,8 +3,8 @@ filetype off
 
 " Use vundle to manage plugins
 " see https://github.com/gmarik/vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required.
 Bundle 'gmarik/vundle'
@@ -19,10 +19,8 @@ Bundle 'pangloss/vim-javascript'
 " Syntax checking
 Bundle 'scrooloose/syntastic'
 " Do syntax checking on start-up
-let g:syntastic_check_on_open=1
-let g:syntastic_php_phpcs_args = "--report=csv --standard=PSR2"
-" Twig syntax highlighting
-Bundle 'evidens/vim-twig'
+"let g:syntastic_check_on_open=1
+"let g:syntastic_php_phpcs_args = "--report=csv --standard=PSR2"
 " markdown syntax highlighting
 Bundle 'plasticboy/vim-markdown'
 " Tab auto completion
