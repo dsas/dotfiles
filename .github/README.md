@@ -23,7 +23,7 @@ Define the alias above in the current shell
 
 Check it out `config checkout`
 
-Install oh my zsh 
+Install [antigen](https://github.com/zsh-users/antigen/wiki/Installation), e.g. by `brew install antigen`
 
 Run `vundle`
 
