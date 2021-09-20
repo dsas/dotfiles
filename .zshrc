@@ -1,5 +1,5 @@
 source /usr/local/share/antigen/antigen.zsh
-antigen init .antigenrc
+antigen init $HOME/.antigenrc
 
 ZSH_CUSTOM="$HOME/.zsh-custom"
 for config_file ($ZSH_CUSTOM/*.zsh(N)); do
