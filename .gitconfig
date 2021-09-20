@@ -23,11 +23,8 @@
 [merge]
 	tool = diffconflicts
 [mergetool "diffconflicts"]
-	cmd = vim-diff-improved vim $BASE $LOCAL $REMOTE $MERGED
+	cmd = ~/bin/vim-diff-improved vim $BASE $LOCAL $REMOTE $MERGED
 	trustExitCode = false
 	keepBackup = false
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+[pull]
+	ff = only
