@@ -10,6 +10,7 @@ antigen bundle nvm
 antigen bundle vundle
 antigen bundle extract
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 
 antigen theme robbyrussell
 
