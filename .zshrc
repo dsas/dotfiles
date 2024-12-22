@@ -1,4 +1,4 @@
-source /usr/local/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 antigen init $HOME/.antigenrc
 
 ZSH_CUSTOM="$HOME/.zsh-custom"
@@ -19,3 +19,8 @@ VISUAL='vim'
 # For a full list of active aliases, run `alias`.
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Use brew
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
