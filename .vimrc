@@ -30,15 +30,16 @@ set tabstop=4
 set expandtab
 set softtabstop=4
 set shiftwidth=4
-set formatoptions +=n		" Continue numbering lists
-set number			" Show line numbers
-set wildmenu			" Better auto-complete for open buffers etc
-"set showcmd			" Show (partial) command in status line.
-set showmatch			" Show matching brackets.
-set ignorecase			" Do case insensitive matching
-set smartcase			" Do smart case matching
-"set incsearch			" Incremental search. Annoying.
-"set mouse=a			" Enable mouse usage (all modes)
+set formatoptions +=n   " Continue numbering lists
+set number              " Show line numbers
+set wildmenu            " Better auto-complete for open buffers etc
+"set showcmd            " Show (partial) command in status line.
+set showmatch           " Show matching brackets.
+set ignorecase          " Do case insensitive matching
+set smartcase           " Do smart case matching
+set re=0                " Explicitly set regex engine to fix slow mac syntax highlighting
+"set incsearch          " Incremental search. Annoying.
+"set mouse=a            " Enable mouse usage (all modes)
 "
 let mapleader = "\\"
 
