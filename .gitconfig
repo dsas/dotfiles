@@ -1,6 +1,12 @@
 [user]
 	name = Dean Sas
-	email = dean.sas@automattic.com
+    email = dean@deansas.org
+[includeIf "hasconfig:remove.*url:git@github.com:Automattic/**"]
+    path = ~/.gitconfig-a8c
+[includeIf "hasconfig:remote.*.url:https://github.com/Automattic/**"]
+    path = ~/.gitconfig-a8c
+[includeIf "hasconfig:remote.*.url:git@github.a8c.com:Automattic/**"]
+    path = ~/.gitconfig-a8c
 [color]
 	ui = auto
 [core]
@@ -29,4 +35,4 @@
 [pull]
 	ff = only
 [init]
-	defaultBranch = trunk
+	defaultBranch = main
