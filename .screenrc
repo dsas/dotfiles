@@ -1,0 +1,21 @@
+# use control and e as the default command, it's what I'm used to
+escape ^ea
+
+# visual bell rather than audio
+vbell on
+vbell_msg "    Bingidy bing    "
+
+# I've seen the start-up message
+startup_message off
+
+# Bigger scrollback
+defscrollback 5000
+
+
+# Display status line at bottom of window
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y}"
+
+activity 'Activity in window %'
+
