@@ -1,9 +1,5 @@
 antigen use oh-my-zsh
 
-if [ "OSTYPE"="darwin11.0" ]; then
-    antigen bundle osx
-fi
-
 # When in a directory with a .nvmrc automatically load it.
 export NVM_AUTOLOAD=1
 antigen bundle nvm
