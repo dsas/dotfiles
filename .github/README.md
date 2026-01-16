@@ -16,16 +16,24 @@ recursion issues
 `echo ".dotfiles" >> .gitignore`
 
 
-Clone the repo 
+Clone the repo
 `git clone --bare <git-repo-url> $HOME/.dotfiles`
 
 Define the alias above in the current shell
 
 Check it out `config checkout`
 
+### Run other installers
+
 Install [antigen](https://github.com/zsh-users/antigen/wiki/Installation), e.g. by `brew install antigen`
 
-Run `vundle`
+Run `vundle` for vim plugins
+
+To use claude plugins for customising  claude, install claude and then run:
+```bash
+claude plugin marketplace add emdashcodes/claude-code-plugins
+claude plugin install claude-code-meta@emdashcodes-claude-code-plugins
+```
 
 ## Afters
 Read through the dotfiles and adjust as necessary, otherwise you'll be committing
