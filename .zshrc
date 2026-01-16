@@ -24,3 +24,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 if [[ "$OSTYPE" == "darwin"* ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+# pnpm
+export PNPM_HOME="/Users/dsas/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
