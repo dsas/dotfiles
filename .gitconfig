@@ -1,7 +1,7 @@
 [user]
 	name = Dean Sas
     email = dean@deansas.org
-[includeIf "hasconfig:remove.*url:git@github.com:Automattic/**"]
+[includeIf "hasconfig:remote.*.url:git@github.com:Automattic/**"]
     path = ~/.gitconfig-a8c
 [includeIf "hasconfig:remote.*.url:https://github.com/Automattic/**"]
     path = ~/.gitconfig-a8c
