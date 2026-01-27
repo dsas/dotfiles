@@ -30,3 +30,6 @@ export PNPM_HOME="/Users/dsas/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
+# Claude does its own weird thing
+export PATH="$HOME/.local/bin:$PATH"
+
