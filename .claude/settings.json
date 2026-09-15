@@ -52,6 +52,8 @@
     "triage@automattic-claude-code-plugins": true
   },
   "alwaysThinkingEnabled": true,
+  "tui": "fullscreen",
+  "theme": "auto",
   "feedbackSurveyState": {
     "lastShownTime": 1754051860467
   }
